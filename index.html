@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariRose | لتصميم وديكور الأفراح والمناسبات الملكية ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mari<span>Rose</span></div>
+        
+        <nav class="top-nav">
+            <a href="#" class="active">الرئيسية</a>
+            <a href="#portfolio">معرض الأعمال</a>
+            <a href="#booking">احجز موعدك</a>
+            <a href="#reviews">آراء العملاء</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+
+        <div class="menu-toggle-btn" onclick="toggleSidebar()">
+            <span>☰ القائمة</span>
+        </div>
+    </header>
+
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-close" onclick="toggleSidebar()">✕ إغلاق</div>
+        <h3>قائمة التنقل 🌸</h3>
+        <a href="#" onclick="toggleSidebar()"><span class="icon">🏠</span> الرئيسية</a>
+        <a href="#portfolio" onclick="toggleSidebar()"><span class="icon">✨</span> معرض الأعمال</a>
+        <a href="#booking" onclick="toggleSidebar()"><span class="icon">📅</span> نظام الحجز</a>
+        <a href="#reviews" onclick="toggleSidebar()"><span class="icon">⭐</span> ريفيوهات زبائننا</a>
+        <a href="#contact" onclick="toggleSidebar()"><span class="icon">📞</span> تواصل معنا</a>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>نصنع من ليلة العمر ذكرى لا تُنسى</h1>
+            <p class="hero-subtitle">تصاميم وديكورات أفراح ملكية تناسب أحلامكم مع MariRose</p>
+            
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-outline">احجز موعدك الآن</a>
+                <a href="#portfolio" class="btn btn-solid">شاهد أعمالنا</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="gallery-container">
+        <h2 class="section-title">معرض أعمالنا الفاخرة ✨</h2>
+        <div class="grid-gallery">
+            <div class="gallery-item"><img src="img1.jpg" alt="MariRose 1"></div>
+            <div class="gallery-item"><img src="img2.jpg" alt="MariRose 2"></div>
+            <div class="gallery-item"><img src="img3.jpg" alt="MariRose 3"></div>
+            <div class="gallery-item"><img src="img4.jpg" alt="MariRose 4"></div>
+            <div class="gallery-item"><img src="img5.jpg" alt="MariRose 5"></div>
+            <div class="gallery-item"><img src="img6.jpg" alt="MariRose 6"></div>
+            <div class="gallery-item"><img src="img7.jpg" alt="MariRose 7"></div>
+            <div class="gallery-item"><img src="img8.jpg" alt="MariRose 8"></div>
+            <div class="gallery-item"><img src="img9.jpg" alt="MariRose 9"></div>
+            <div class="gallery-item"><img src="img10.jpg" alt="MariRose 10"></div>
+            <div class="gallery-item"><img src="img11.jpg" alt="MariRose 11"></div>
+            <div class="gallery-item"><img src="img12.jpg" alt="MariRose 12"></div>
+            <div class="gallery-item"><img src="img13.jpg" alt="MariRose 13"></div>
+            <div class="gallery-item"><img src="img14.jpg" alt="MariRose 14"></div>
+            <div class="gallery-item"><img src="img15.jpg" alt="MariRose 15"></div>
+            <div class="gallery-item"><img src="img16.jpg" alt="MariRose 16"></div>
+            <div class="gallery-item"><img src="img17.jpg" alt="MariRose 17"></div>
+            <div class="gallery-item"><img src="img18.jpg" alt="MariRose 18"></div>
+            <div class="gallery-item"><img src="img19.jpg" alt="MariRose 19"></div>
+            <div class="gallery-item"><img src="img20.jpg" alt="MariRose 20"></div>
+            <div class="gallery-item"><img src="img21.jpg" alt="MariRose 21"></div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="booking-card">
+            <h2>طلب حجز موعد ومناسبة 📅</h2>
+            <p>سجلي بياناتك وسيتم فتح محادثة الواتساب فوراً لمراجعة وتأكيد ميعادك</p>
+            <form class="booking-form" onsubmit="sendBooking(event)">
+                <input type="text" id="client-name" placeholder="الاسم بالكامل" required>
+                <input type="tel" id="client-phone" placeholder="رقم الهاتف للتواصل" required>
+                <input type="text" id="event-location" placeholder="مكان المناسبة / اسم القاعة أو البيت" required>
+                <input type="date" id="event-date" required>
+                <select id="event-type" required>
+                    <option value="" disabled selected>اختر نوع الديكور / المناسبة</option>
+                    <option value="خطوبة">ديكور خطوبة فخم</option>
+                    <option value="زفاف">كوشة زفاف ملكية</option>
+                    <option value="عيد ميلاد">حفلة عيد ميلاد / سابع</option>
+                    <option value="تخرج أو آخر">ديكور مناسبة خاصة</option>
+                </select>
+                <button type="submit" class="submit-btn">إرسال طلب الحجز للواتساب ⚜️</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <h2>ريفيوهات عرايس وعملاء MariRose 🌟</h2>
+        <p class="section-desc">آراء عرايسنا الحقيقية بعد استلام الكوشة وتنسيق ليلة العمر</p>
+        
+        <div class="reviews-split-container">
+            <div class="split-review-card">
+                <div class="review-image-side">
+                    <img src="rev1.jpg" alt="سكرين شوت ريفيو 1">
+                </div>
+                <div class="review-text-side">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h4>Mira (فرح)</h4>
+                    <p class="review-p">"الديكوريشن كان خطير تسلم ايديكم بجد خليتوا مناسبتي احلي واحلي "</p>
+                </div>
+            </div>
+
+            <div class="split-review-card">
+                <div class="review-image-side">
+                    <img src="rev2.jpg" alt="سكرين شوت ريفيو 2">
+                </div>
+                <div class="review-text-side">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h4>Marina(خطوبه)</h4>
+                    <p class="review-p">"ًمبندمش ع كل مره بختاركم فيهاا احلي واجمد بيدج للديكوريشن ميرسي ع تعبكم "</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact-footer">
+        <h2>تواصل مباشر مع إدارة MariRose 🌸</h2>
+        <p class="footer-desc">يسعدنا دائماً تصميم وتنسيق لياليكم المبهجة</p>
+        <div class="contact-links">
+            <a href="tel:01044168737" class="footer-btn phone-style">📞 اتصل بنا: 01044168737</a>
+            <a href="https://wa.me/201550297942" target="_blank" class="footer-btn whatsapp-style">💬 راسلينا واتساب: 01550297942</a>
+            <a href="https://www.facebook.com/share/18hDZGyUKm/" target="_blank" class="footer-btn facebook-style">🔵 تابعينا على فيسبوك (الحساب الرسمي)</a>
+        </div>
+        <p class="copy">جميع الحقوق محفوظة © MariRose 2026</p>
+    </footer>
+
+    <script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebarMenu');
+        sidebar.classList.toggle('open');
+    }
+
+    function sendBooking(event) {
+        event.preventDefault();
+        const name = document.getElementById('client-name').value;
+        const phone = document.getElementById('client-phone').value;
+        const location = document.getElementById('event-location').value;
+        const date = document.getElementById('event-date').value;
+        const type = document.getElementById('event-type').value;
+        
+        // تعديل نص الرسالة ليشمل مكان المناسبة تلقائياً
+        const message = `مرحباً MariRose ✨\nلقد قمت بإرسال طلب حجز من الموقع المطور:\n\n👤 الاسم: ${name}\n📞 رقم الهاتف: ${phone}\n📍 مكان المناسبة: ${location}\n📅 التاريخ: ${date}\n🎈 المناسبة: ${type}`;
+        const whatsappUrl = `https://wa.me/201550297942?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+    </script>
+</body>
+</html>
